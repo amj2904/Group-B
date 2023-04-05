@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "productId": 4,
+      "productName": "OPPO A74 5G",
+      "productDescription": "Fantastic Purple,6GB RAM,128GB Storage with No Cost EMI/Additional Exchange Offers",
+      "imageUrl": "assets/1.jpg",
+      "unitPrice": "15900",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
