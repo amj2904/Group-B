@@ -1,6 +1,6 @@
 <div class="container " style="margin-bottom: 25px;" >
     <div class="row">
-        <ng-container *ngFor="let item of allProductData">
+        <ng-container *ngFor="let item of productList">
             <div class="card col-md-3">
                
                 <img src="{{item.imageUrl}}" alt="">
@@ -8,12 +8,12 @@
                 <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.productDescription | slice: 0:100}}</p>
                 <p style="color: #B12704; "> {{item.unitPrice}}</p>
                 
+                <input  type="number" [(ngModel)]="pQuantity" id="" min="1" max="5"  placeholder="Please Enter Quantity Of Product">
+               <br> <button class="btn btn-primary" (click)=addtocart(item,pQuantity) >Add to cart</button>
+
                 
-                <input  type="number"  id="" min="1" max="5"  placeholder="Please Select Quantity Of Product">
-                <br> <button class="btn btn-primary"   >Add to cart</button>
             </div>
         </ng-container>
 
     </div>
 </div>
-<h2>hello</h2>

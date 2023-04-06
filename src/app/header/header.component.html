@@ -8,20 +8,25 @@
         <ul class="navbar-nav">
           
           <li class="nav-item">
-            <a class="nav-link mt-10" href="Home">Home </a>
+            <a class="nav-link mt-10"  [routerLink]="['/productpage']" >Home </a>
           </li>
   
           <li class="nav-item">
-            <a class="nav-link mt-10" href="aboutus">About Us</a>
+            <a class="nav-link mt-10"   [routerLink]="['/aboutus']" >About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contactus">Contact Us</a>
+            <a class="nav-link" [routerLink]="['/contactus']">Contact Us</a>
           </li>
          
           <li class="nav-item-">
-              <a class="nav-link" href="/addproduct">addproduct</a>
+              <a class="nav-link"   [routerLink]="['/addproduct']">addproduct</a>
             </li>
-            
+
+            <button routerLink="addtocart"  class="btn btn-primary my-2 my-sm-0" style="background-color: darkslategrey">
+              <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+  
+              <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+          </button>
   
         </ul>
       </div>

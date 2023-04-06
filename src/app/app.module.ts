@@ -10,6 +10,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductpageComponent } from './productpage/productpage.component';
+import { AddcartComponent } from './cart/addcart/addcart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ProductpageComponent } from './productpage/productpage.component';
     HeaderComponent,
     AboutusComponent,
     ContactusComponent,
-    ProductpageComponent
+    ProductpageComponent,
+    AddcartComponent
+   
   ],
   imports: [
     BrowserModule,

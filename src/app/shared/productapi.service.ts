@@ -9,6 +9,7 @@ export class ProductapiService {
  url="http://localhost:3000/posts";
 
    constructor(private _http:HttpClient) { }
+   
    postProduct(data:any){
      
      return this._http.post<any>(this.url,data).pipe(map((res:any)=>{
