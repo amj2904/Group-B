@@ -16,23 +16,28 @@
 <table class="table  mt-3">
     <thead>
         <tr>
-          <th scope="col" class="bg-danger">Product Id</th>
+          <th (click)="sort('id')" scope="col" class="bg-danger">Product Id &nbsp;<i class=" fa fa-sort"></i></th>
             <th scope="col" class="bg-danger">Product Name</th>
             <th scope="col" class="bg-danger">Product Description</th>
             <th scope="col" class="bg-danger">Unit Price</th>
             <th scope="col" class="bg-danger">Images</th>
+            <th scope="col" class="bg-danger">Vendor name</th>
+            <th scope="col" class="bg-danger">Product  Category</th>
             <th scope="col" class="bg-danger">Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of allProductData">
+        <tr *ngFor="let data of allProductData |orderBy:key:reverse | paginate:{itemsPerPage:2,currentPage:p,totalItems:totalLength};">
         
            <td>{{data.productId}}</td>
            <td>{{data.productName}}</td>
            <td>{{data.productDescription}}</td>
+           
           
            <td>₹{{data.unitPrice}}</td>
            <td>  <img src="{{data.imageUrl}}" width="80px" height="80px"  alt=""></td>
+           <td>{{data.Vendor}}</td>
+           <td>{{data.prodcuctCategory}}</td>
            <td>
                <button (click)="onEditProduct(data)" class="btn btn-info" class=" btn btn-success"  type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
                <button (click)="deleteProduct(data)" class="btn btn-danger ">Delete</button>
@@ -42,6 +47,7 @@
         </tr>
       
     </tbody>
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
 </table>
 
 
@@ -81,15 +87,40 @@
                     <span class="text-danger" *ngIf="formValue.controls['unitPrice'].dirty && formValue.hasError('required','unitPrice')">*Unit Price</span>
                   </div>
                  
-                 
+                
+
+                 <div class="mb-3">
+                  <label for="unitPrice" class="form-label">Select Vendor</label>
+                  <select formControlName="Vendor" class="form-select">
+                   
+                      <option  *ngFor="let vendor of allProductVendors" value="{{vendor.vendername}}" >{{vendor.vendername}}</option>
+                    
+                    
+                  </select>
+                </div>
+                <!-- //************ -->
+                <div class="mb-3">
+                  <label for="unitPrice" class="form-label">Select Category</label>
+                  <select formControlName="prodcuctCategory" class="form-select">
+                   
+                      <option   value="Mobile" >Mobile</option>
+                      <option   value="Laptop" >Laptop</option>
+                      <option   value="AC" >AC</option>
+                    
+                    
+                  </select>
+                </div>
+              <!--   //************ -->
+
+               
                 
                
               </form>
         </div>
         <div class="modal-footer">
           <button type="button" id="clear" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button  *ngIf="showAdd"  [disabled]=formValue.invalid (click)="addProduct()" type="button" class="btn btn-primary" >Add Details</button>
-          <button *ngIf="showUpdate"  [disabled]=formValue.invalid type="button" class="btn btn-primary" (click)="updateProduct()">Update Details</button>
+          <button  *ngIf="showAdd"   (click)="addProduct()" type="button" class="btn btn-primary" >Add Details</button>
+          <button *ngIf="showUpdate"   type="button" class="btn btn-primary" (click)="updateProduct()">Update Details</button>
         </div>
       </div>
     </div> 

@@ -17,7 +17,7 @@ export class ProductpageComponent implements OnInit {
   addCartData:any;
   pQuantity:any
   productPage:Productmodel[]=[];
-  
+  nameSearch: any;
 
   constructor(private productpageService:ProductapiService,private cartService : CartserviceService,private router:Router ) { }
 
@@ -32,6 +32,8 @@ export class ProductpageComponent implements OnInit {
     })
 
     this.getProductPage();
+    
+   
 
     this.cartService.search.subscribe((val:any)=>{
       this.searchKey = val;
@@ -52,8 +54,21 @@ export class ProductpageComponent implements OnInit {
   
   getProductPage(){
     this.productpageService.getProduct().subscribe(productPage=>this.productPage=productPage)
+    console.log(this.productPage);
   }
 
+  Search(){
+    if(this.nameSearch ==""){
+      this.ngOnInit();
+    }
+    else{
+      
+      this.productPage=this.productPage.filter(res=>{
+        return res.prodcuctCategory.toLocaleLowerCase().match(this.nameSearch.toLocaleLowerCase());
+        console.log(res);
+      })
+    }
+  }
  }
 
   

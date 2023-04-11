@@ -1,24 +1,46 @@
 {
   "posts": [
     {
-      "productId": 4,
-      "productName": "OPPO A74 5G",
-      "productDescription": "Fantastic Purple,6GB RAM,128GB Storage with No Cost EMI/Additional Exchange Offers",
+      "productName": "oppo",
+      "productDescription": "oppo new mobile phone",
       "imageUrl": "assets/1.jpg",
-      "unitPrice": "15900",
-      "id": 4
+      "productId": 7,
+      "unitPrice": "34000",
+      "Vendor": "mahesh",
+      "prodcuctCategory": "Mobile",
+      "id": 7
     },
     {
-      "productId": 5,
-      "productName": "lenovo",
-      "productDescription": "aaaaaaasss",
+      "productName": "oppo",
+      "productDescription": "aaaaaaa",
       "imageUrl": "assets/1.jpg",
-      "unitPrice": "3400",
-      "id": 5
+      "productId": 8,
+      "unitPrice": "4500",
+      "Vendor": "ashwin",
+      "prodcuctCategory": "Mobile",
+      "id": 8
+    },
+    {
+      "productName": "lenovo",
+      "productDescription": "new len laptop",
+      "imageUrl": "assets/2.jpg",
+      "productId": 9,
+      "unitPrice": "4500",
+      "Vendor": "mahesh",
+      "prodcuctCategory": "Laptop",
+      "id": 9
     }
   ],
   "comments": [],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "vendors": [
+    {
+      "vendername": "ashwin"
+    },
+    {
+      "vendername": "mahesh"
+    }
+  ]
 }
