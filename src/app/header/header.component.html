@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">E-Shop</a>
-      <!-- <a class="navbar-brand" href="#">Home</a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,6 +21,8 @@
               <a class="nav-link"   [routerLink]="['/addproduct']">addproduct</a>
             </li>
 
+            <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search Products">
+
             <button routerLink="addtocart"  class="btn btn-primary my-2 my-sm-0" style="background-color: darkslategrey">
               <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
   
@@ -30,4 +31,9 @@
   
         </ul>
       </div>
+
+      
     </nav>
+
+
+

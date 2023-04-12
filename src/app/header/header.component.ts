@@ -10,7 +10,7 @@ import { CartserviceService } from '../shared/cartservice.service';
 })
 export class HeaderComponent implements OnInit {
   public totalItem : number = 0;
-  public searchTerm !: string;
+  public searchTerm : string = '';
   constructor(private cartService:CartserviceService,private productpageService:ProductapiService) { }
   productPage:Productmodel[]=[];
   ngOnInit(): void {this.cartService.getProducts()

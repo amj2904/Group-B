@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class ProductpageComponent implements OnInit {
   allProductData!: any;
   public productList : any ;
+  public filterCategory: any;
   searchKey:string ="";
   addCartData:any;
   pQuantity:any
@@ -25,10 +26,15 @@ export class ProductpageComponent implements OnInit {
     this.productpageService.getProduct()
     .subscribe(res=>{
       this.productList=res; 
+      this.filterCategory = res;
       console.log(this.productList);
       this.productList.forEach((a:any) => {
+        if(a.prodcuctCategory === 'mobile'){
+          a.prodcuctCategory = "mobile"
+        }
         Object.assign(a,{quantity:1,total:a.price});
       });
+      console.log(this.productList)
     })
 
     this.getProductPage();
@@ -57,17 +63,25 @@ export class ProductpageComponent implements OnInit {
     console.log(this.productPage);
   }
 
-  Search(){
-    if(this.nameSearch ==""){
-      this.ngOnInit();
-    }
-    else{
+  // Search(){
+  //   if(this.nameSearch ==""){
+  //     this.ngOnInit();
+  //   }
+  //   else{
       
-      this.productPage=this.productPage.filter(res=>{
-        return res.prodcuctCategory.toLocaleLowerCase().match(this.nameSearch.toLocaleLowerCase());
-        console.log(res);
-      })
-    }
+  //     this.productPage=this.productPage.filter(res=>{
+  //       return res.prodcuctCategory.toLocaleLowerCase().match(this.nameSearch.toLocaleLowerCase());
+  //       console.log(res);
+  //     })
+  //   }
+  // }
+
+  filter(prodcuctCategory:string){
+    this.filterCategory = this.productList.filter((a:any) => {
+      if(a.prodcuctCategory == prodcuctCategory || prodcuctCategory == ''){
+        return a;
+      }
+    })
   }
  }
 
