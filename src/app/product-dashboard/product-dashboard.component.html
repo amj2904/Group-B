@@ -1,13 +1,27 @@
 
 
-<div class="p-5 mb-4 bg-light rounded-2">
-    <div class="container-fluid py-3">
+<div class="p-1 mb-1 bg-light rounded-1">
+    <div class="container-fluid py-1">
         <!-- <h1 class="display-5 fw-bold"> Add Product</h1> -->
       
     <button (click)="clickAddProduct()" class=" btn btn-success"  type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product</button>
     &nbsp;&nbsp;
+    
+    <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Users Data</button>
+    &nbsp;&nbsp;
+    <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Add Vendor</button>
+    &nbsp;&nbsp;
+    <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Add Category</button>
+    &nbsp;&nbsp;
+    <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Contact US Data</button>
+    &nbsp;&nbsp;
+    <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Orders List</button>
+    &nbsp;&nbsp;
+    <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Dispute List Data</button>
+    &nbsp;&nbsp;
    
     </div>
+    
 
 </div>
 
@@ -16,18 +30,18 @@
 <table class="table  mt-3">
     <thead>
         <tr>
-          <th (click)="sort('id')" scope="col" class="bg-danger">Product Id &nbsp;<i class=" fa fa-sort"></i></th>
-            <th scope="col" class="bg-danger">Product Name</th>
-            <th scope="col" class="bg-danger">Product Description</th>
-            <th scope="col" class="bg-danger">Unit Price</th>
-            <th scope="col" class="bg-danger">Images</th>
-            <th scope="col" class="bg-danger">Vendor name</th>
-            <th scope="col" class="bg-danger">Product  Category</th>
-            <th scope="col" class="bg-danger">Action</th>
+          <th (click)="sort('id')" scope="col" class="bg-info">Product Id &nbsp;<i class=" fa fa-sort"></i></th>
+            <th scope="col" class="bg-info">Product Name</th>
+            <th scope="col" class="bg-info">Product Description</th>
+            <th scope="col" class="bg-info">Unit Price</th>
+            <th scope="col" class="bg-info">Images</th>
+            <th scope="col" class="bg-info">Vendor name</th>
+            <th scope="col" class="bg-info">Product  Category</th>
+            <th scope="col" class="bg-info">Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of allProductData |orderBy:key:reverse | paginate:{itemsPerPage:2,currentPage:p,totalItems:totalLength};">
+        <tr *ngFor="let data of allProductData |orderBy:key:reverse | paginate:{itemsPerPage:4,currentPage:p,totalItems:totalLength};">
         
            <td>{{data.productId}}</td>
            <td>{{data.productName}}</td>
@@ -47,10 +61,11 @@
         </tr>
       
     </tbody>
-    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+   
+   
 </table>
 
-
+<p><pagination-controls (pageChange)="p=$event"></pagination-controls></p>
 <!-- Button trigger modal -->
 
   
