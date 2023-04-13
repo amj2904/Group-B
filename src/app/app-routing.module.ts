@@ -5,6 +5,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ProductDashboardComponent } from './product-dashboard/product-dashboard.component';
 import { ProductpageComponent } from './productpage/productpage.component';
 import { AddcartComponent } from './cart/addcart/addcart.component';
+import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,9 @@ const routes: Routes = [
 
   {
     path:'addtocart',component:AddcartComponent
+  },
+  {
+    path:'checkout',component:TestcheckoutComponent
   }
 
 ];

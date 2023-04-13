@@ -15,6 +15,7 @@ import { AddcartComponent } from './cart/addcart/addcart.component';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FilterPipe } from './shared/filter.pipe';
+import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 
 
 
@@ -27,7 +28,8 @@ import { FilterPipe } from './shared/filter.pipe';
     ContactusComponent,
     ProductpageComponent,
     AddcartComponent,
-    FilterPipe
+    FilterPipe,
+    TestcheckoutComponent
    
   ],
   imports: [

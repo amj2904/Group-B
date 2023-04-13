@@ -49,15 +49,6 @@
       "prodcuctCategory": "AC",
       "productId": 12,
       "id": 13
-    },
-    {
-      "productName": "Samsung Galaxy M04",
-      "productDescription": "4GB RAM, 64GB Storage | Upto 8GB RAM ",
-      "imageUrl": "assets/m1.jpg",
-      "unitPrice": "6500",
-      "Vendor": "mahesh",
-      "prodcuctCategory": "Mobile",
-      "id": 14
     }
   ],
   "comments": [],
