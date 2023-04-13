@@ -1,12 +1,45 @@
 
-<nav class="navbar">
+<!-- <nav class="navbar">
     <input class="form-control" type="text" name="nameSearch" [(ngModel)]="nameSearch" 
-    (ngModelChange)="Search()" placeholder="Enter Catrgory">
-</nav>
+    (ngModelChange)="Search()" placeholder="Search...">
+</nav> -->
 
+<!-- CATEGORY FEATURE  -->
 <div class="container " style="margin-bottom: 25px;" >
+<div class="item_upper">
+    <div class="item">
+      <a (click)="filter('')">
+          <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+          <h6>All Products</h6>
+      </a>
+    </div>
+
+    <div class="item">
+        <a (click)="filter('Mobile')">
+            <img src="https://www.kindpng.com/picc/m/422-4225211_new-mobile-phone-png-transparent-cartoons-smart-phones.png" alt="">
+            <h6>Mobile</h6>
+        </a>
+    </div>
+
+    <div class="item">
+        <a (click)="filter('Laptop')">
+            <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+            <h6>Laptop</h6>
+        </a>
+    </div>
+
+    <div class="item">
+        <a (click)="filter('Ac')">
+            <img  src="https://www.kindpng.com/picc/m/296-2963364_transparent-air-conditioner-png-osaka-air-conditioner-png.png" alt="">
+            <h6>Air Conditioner</h6>
+        </a>
+    </div>
+
+</div>
+
+
     <div class="row">
-        <ng-container *ngFor="let item of productList | filter :nameSearch ">
+        <ng-container *ngFor="let item of filterCategory | filter :searchKey: 'productName' ">
             <div class="card col-md-3">
                
                 <img src="{{item.imageUrl}}" alt="">
@@ -26,3 +59,4 @@
 
     </div>
 </div>
+

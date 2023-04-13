@@ -10,13 +10,18 @@
     border-radius: .25rem;
 }
 
+.item-upper{
+    display: flex;
+}
+
 .item img {
     width: 64px;
 }
 
 .item {
     margin: 0px 15px;
-    text-align: center;
+    /* text-align: center; */
+    display: inline-block;
 }
 
 .item a:hover {
