@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductpageComponent } from './productpage/productpage.component';
 import { AddcartComponent } from './cart/addcart/addcart.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AddcartComponent } from './cart/addcart/addcart.component';
     AboutusComponent,
     ContactusComponent,
     ProductpageComponent,
-    AddcartComponent
+    AddcartComponent,
+    LoginComponent,
+    SignupComponent
    
   ],
   imports: [

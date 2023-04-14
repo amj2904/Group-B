@@ -5,8 +5,22 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ProductDashboardComponent } from './product-dashboard/product-dashboard.component';
 import { ProductpageComponent } from './productpage/productpage.component';
 import { AddcartComponent } from './cart/addcart/addcart.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
+  {
+    path:'', redirectTo:'login', pathMatch:'full'
+  },
+  {
+    path:'login', component:LoginComponent
+  },
+  {
+    path:'signup', component:SignupComponent
+  },
+  {
+    path:'productdashboard', component:ProductDashboardComponent
+  },
   {
     path:'contactus',component:ContactusComponent
   },
