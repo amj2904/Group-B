@@ -46,16 +46,8 @@ export class ProductpageComponent implements OnInit {
     })
   }
 
-  addtocart(item: any,pQuantity:number){
-    if (pQuantity >=1){
-      this.cartService.addtoCart(item,pQuantity);
-    console.log("addtocart()........... productpage "+item +" quantity :" +pQuantity)
-    }
-    else{
-      alert(item.productName +" "+"Please Select Quantity Of Product !!!")
-    }
-    // this.cartService.addtoCart(item,pQuantity);
-    // console.log("addtocart()........... productpage "+item +" quantity :" +pQuantity)
+  addtocart(item: any){
+    this.cartService.addtoCart(item);
   }
   
   getProductPage(){
@@ -63,18 +55,7 @@ export class ProductpageComponent implements OnInit {
     console.log(this.productPage);
   }
 
-  // Search(){
-  //   if(this.nameSearch ==""){
-  //     this.ngOnInit();
-  //   }
-  //   else{
-      
-  //     this.productPage=this.productPage.filter(res=>{
-  //       return res.prodcuctCategory.toLocaleLowerCase().match(this.nameSearch.toLocaleLowerCase());
-  //       console.log(res);
-  //     })
-  //   }
-  // }
+
 
   filter(prodcuctCategory:string){
     this.filterCategory = this.productList.filter((a:any) => {

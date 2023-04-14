@@ -20,7 +20,7 @@ export class CartserviceService {
     
   }
 
-  public cartItemList : any =[]
+  public cartItemList : any[] =[]
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
   
@@ -37,28 +37,35 @@ export class CartserviceService {
     this.cartItemList.push(...product);
     this.productList.next(product);
   }
-  addtoCart(product:any,pQuantity:number){
-    const _product={product:product,quantity:pQuantity};
-    //console.log("addtocart : " +JSON.stringify(_product));
+  
+addtoCart(product:any){
+  const itemIndex = this.cartItemList.findIndex(item => item.productId === product.productId);
+  const _product={product:product};
+
+  if (itemIndex === -1) {
     this.cartItemList.push(_product);
-    this.productList.next(this.cartItemList);
-    //console.log("cartlist............"+JSON.stringify(this.cartItemList));
-    //this.getTotalPrice();
+    }
+
+
+  // const _product={product:product,quantity:pQuantity};
+  //console.log("addtocart : " +JSON.stringify(_product));
+  // this.cartItemList.push(_product);
+  this.productList.next(this.cartItemList.slice(0));
+  //console.log("cartlist............"+JSON.stringify(this.cartItemList));
+  // this.getTotalPrice();
+}
+
+
+  // this method get total price by adding all the products total from cart
+  getTotalPrice() : number{
+    let grandTotal = 0;
+    this.cartItemList.map((a:any)=>{
+      const q:number=parseInt(a.product.quantity);
+      grandTotal+=a.product.unitPrice*q;
+    })
+    return grandTotal;
   }
 
-  getTotalPrice(product:any,quantity:any):number {
-    let grandTotal=0;
-    this.cartItemList.map((a:any)=>{
-      console.log(":::::::::::::"+JSON.stringify(this.cartItemList));
-      const q:number=parseInt(a.quantity);
-      console.log(">>>>>>>"+q);
-      grandTotal+=a.product.unitPrice*q;
-      console.log(grandTotal);
-      //grandTotal+=a.total;
-    });
-    return grandTotal;
-   
-  }
   removeCartItem(product: any){
     this.cartItemList.map((a:any, index:any)=>{
       if(product.id=== a.id){
