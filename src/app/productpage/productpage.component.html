@@ -1,9 +1,4 @@
 
-<!-- <nav class="navbar">
-    <input class="form-control" type="text" name="nameSearch" [(ngModel)]="nameSearch" 
-    (ngModelChange)="Search()" placeholder="Search...">
-</nav> -->
-
 <!-- CATEGORY FEATURE  -->
 <div class="container " style="margin-bottom: 25px;" >
 <div class="item_upper">
@@ -29,7 +24,7 @@
     </div>
 
     <div class="item">
-        <a (click)="filter('Ac')">
+        <a (click)="filter('AC')">
             <img  src="https://www.kindpng.com/picc/m/296-2963364_transparent-air-conditioner-png-osaka-air-conditioner-png.png" alt="">
             <h6>Air Conditioner</h6>
         </a>
@@ -49,9 +44,7 @@
                 <p style="color: #032208; ">Category:{{item.prodcuctCategory}}</p>
                 <p style="color: #021107; ">Sold By:{{item.Vendor}}</p>
 
-                
-                <input  type="number" [(ngModel)]="pQuantity" id="" min="1" max="5"  placeholder="Please Enter Quantity Of Product">
-               <br> <button class="btn btn-primary" (click)=addtocart(item,pQuantity) >Add to cart</button>
+               <br> <button class="btn btn-primary" (click)=addtocart(item) >Add to cart</button>
 
                 
             </div>
