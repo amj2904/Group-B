@@ -29,7 +29,8 @@ export class AddcartComponent implements OnInit {
        
        localStorage.setItem('cartObj',JSON.stringify(cartProduct));
       });
-      this.grandTotal = this.cartService.getTotalPrice(cartProduct.products,cartProduct.quantity);
+      // this.grandTotal = this.cartService.getTotalPrice(cartProduct.products,cartProduct.quantity);
+      this.grandTotal = this.cartService.getTotalPrice();
     console.log(" "+this.grandTotal);
     });
    
@@ -43,6 +44,34 @@ export class AddcartComponent implements OnInit {
     this.cartService.removeAllCart();
   }
 
+
+   // Create a function for Increase the Quantity of product
+   increaseQuantity(item:any,quantity:number){
+    for(let i=0;i<this.products.length;i++)
+    {
+      if(this.products[i].productId === item.productId){
+      this.products[i].product.quantity =quantity+1 ;
+      this.products[i].total = item.total + item.productPrice;
+    }
+     }  
+     this.grandTotal=this.cartService.getTotalPrice();    
+    }
+
+    // Create a function for Decrease the Quantity of product
+    decreaseQuantity(item:any,quantity:number){
+      for(let i=0;i<this.products.length;i++)
+      {
+        if(this.products[i].productId === item.productId ){
+          console.log(this.products)
+          if(quantity>1){
+            this.products[i].total = item.total - item.productPrice;
+          }
+          if(quantity !=1)
+          this.products[i].product.quantity = quantity-1;
+            }    
+      }  
+      this.grandTotal=this.cartService.getTotalPrice();  
+    }
 
 
   }
