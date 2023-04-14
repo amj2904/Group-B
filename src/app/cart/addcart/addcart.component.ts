@@ -33,6 +33,7 @@ export class AddcartComponent implements OnInit {
     console.log(" "+this.grandTotal);
     });
    
+    console.log("Tesing "+this.cartService);
    }
 
    removeItem(item: any){

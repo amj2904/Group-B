@@ -7,6 +7,7 @@ import { ProductpageComponent } from './productpage/productpage.component';
 import { AddcartComponent } from './cart/addcart/addcart.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,9 @@ const routes: Routes = [
 
   {
     path:'addtocart',component:AddcartComponent
+  },
+  {
+    path:'checkout',component:TestcheckoutComponent
   }
 
 ];
