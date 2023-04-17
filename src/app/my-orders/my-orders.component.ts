@@ -13,8 +13,7 @@ export class MyOrdersComponent implements OnInit {
 
   ngOnInit(): void {
     this.product.orderList().subscribe((result) => {
-    this.orderData = result
-    console.log(this.orderData)
+    this.orderData = result;
     })
   }
 

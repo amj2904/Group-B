@@ -90,6 +90,13 @@
       "password": "",
       "mobile": "",
       "id": 7
+    },
+    {
+      "fullname": "anjani",
+      "email": "anjani@gmail.com",
+      "password": "1234",
+      "mobile": 345678,
+      "id": 8
     }
   ],
   "contactus": [
