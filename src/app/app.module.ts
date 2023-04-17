@@ -20,6 +20,8 @@ import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { SignupComponent } from './signup/signup.component';
     FilterPipe,
     TestcheckoutComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ThankyouComponent,
+    MyOrdersComponent
    
   ],
   imports: [
