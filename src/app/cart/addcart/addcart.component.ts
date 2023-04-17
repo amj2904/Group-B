@@ -47,8 +47,6 @@ export class AddcartComponent implements OnInit {
 
    // Create a function for Increase the Quantity of product
    increaseQuantity(item:any,quantity:number){
-    console.log(item.product.productId)
-     console.log(quantity)
      for(let i=0;i<this.products.length;i++)
      {
       console.log(this.products[i].product)

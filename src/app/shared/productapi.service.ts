@@ -32,6 +32,9 @@ export class ProductapiService {
        return res;
      }))
    }
+   orderList(){
+    return this._http.get<any[]>('http://localhost:3000/orders');
+   }
  
  }
  
