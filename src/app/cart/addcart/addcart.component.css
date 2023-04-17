@@ -49,4 +49,6 @@ h6 {
 
 .quantityFeature{
     text-align: center;
+    cursor: pointer;
 }
+

@@ -31,16 +31,6 @@
       "id": 11
     },
     {
-      "productName": "Blue Star 1.2 Ton 3 Star",
-      "productDescription": " Convertible 4 in 1 Cooling Inverter Split AC",
-      "imageUrl": "assets/2acjpg.jpg",
-      "unitPrice": "37000",
-      "Vendor": "ashwin",
-      "prodcuctCategory": "AC",
-      "productId": 12,
-      "id": 12
-    },
-    {
       "productName": "Voltas 1.4 Ton 3 Star",
       "productDescription": "(Copper, Adjustable Cooling, Anti-dust Filter, 2023 Model",
       "imageUrl": "assets/3ac.jpg",
@@ -162,31 +152,9 @@
   ],
   "orders": [
     {
-      "orderid": 948255,
-      "payment": "Cash on delivery",
-      "date": "2023-04-17T13:00:25.451Z",
-      "userid": 1,
-      "products": [
-        {
-          "product": {
-            "productName": "oppo",
-            "productDescription": "oppo new mobile phone",
-            "imageUrl": "assets/1.jpg",
-            "productId": 7,
-            "unitPrice": "34000",
-            "Vendor": "mahesh",
-            "prodcuctCategory": "Mobile",
-            "id": 7,
-            "quantity": 1
-          }
-        }
-      ],
-      "id": 1
-    },
-    {
-      "orderid": 785522,
+      "orderid": 177107,
       "payment": "online",
-      "date": "2023-04-17T13:01:50.038Z",
+      "date": "2023-04-17T13:21:07.813Z",
       "userid": 1,
       "products": [
         {
@@ -203,7 +171,7 @@
           }
         }
       ],
-      "id": 2
+      "id": 1
     }
   ]
 }
