@@ -49,6 +49,7 @@ export class TestcheckoutComponent implements OnInit {
     const order:any={
       
       orderid:random,
+      payment:this.paymentoption,
       date:date,
       userid:userid,
       products:this.products
@@ -70,7 +71,7 @@ export class TestcheckoutComponent implements OnInit {
    
   }
   paymentmethod(event:any){
-    this.paymentoption=event.this.value;
+    this.paymentoption=event.target.value;
     console.log(this.paymentoption);
   }
 
