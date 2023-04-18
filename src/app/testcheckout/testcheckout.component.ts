@@ -15,6 +15,7 @@ export class TestcheckoutComponent implements OnInit {
   products:any[]=[];
   grandTotal1:number=0;
   
+  
   paymentoption:string='';
 
   constructor(private cartService:CartserviceService,private ordersService:OrdersService,private router:Router) { }
@@ -52,7 +53,9 @@ export class TestcheckoutComponent implements OnInit {
       payment:this.paymentoption,
       date:date,
       userid:userid,
-      products:this.products
+      products:this.products,
+      grandTotal:this.grandTotal1
+
     };
     console.log(order);
     //

@@ -41,6 +41,7 @@
       "id": 13
     },
     {
+<<<<<<< HEAD
       "productName": null,
       "productDescription": "sdd",
       "imageUrl": null,
@@ -57,8 +58,67 @@
       "Vendor": null,
       "prodcuctCategory": null,
       "id": 15
+=======
+      "productId": 14,
+      "productName": "Lenovo IdeaPad 3",
+      "productDescription": "11th Gen Intel Core i3 15.6",
+      "imageUrl": "assets/7.jpg",
+      "unitPrice": "56000",
+      "Vendor": "ashwin",
+      "prodcuctCategory": "Laptop",
+      "id": 14
+    },
+    {
+      "productId": 15,
+      "productName": "ASUS Zenbook",
+      "productDescription": "11th Gen Intel Core i3 15.6",
+      "imageUrl": "assets/8.jpg",
+      "unitPrice": "12000",
+      "Vendor": "mahesh",
+      "prodcuctCategory": "Laptop",
+      "id": 15
+    },
+    {
+      "productName": "Lenovo IdeaPad 3 ",
+      "productDescription": "3 Star Inverter Split AC (5 in 1 Convertible,",
+      "imageUrl": "assets/10.jpg",
+      "unitPrice": "45000",
+      "Vendor": "mahesh",
+      "prodcuctCategory": "AC",
+      "productId": 16,
+      "id": 16
+    },
+    {
+      "productId": 17,
+      "productName": "OnePlus",
+      "productDescription": "CE 3 Lite 5G (Pastel Lime, 8GB RAM",
+      "imageUrl": "assets/11.jpg",
+      "unitPrice": "19000",
+      "Vendor": "ashwin",
+      "prodcuctCategory": "Mobile",
+      "id": 17
+>>>>>>> 9497735638ea48b8862baad090fe86e94babd7b7
     }
   ],
+
+  "HelpCentre": [
+    {
+      "id": 13,
+      "orderno": "10000111",
+      "productdetails": "AC",
+      "problemtype": "Return Fund",
+      "descriptions": "Damaged Product"
+    },
+    {
+      "id": 14,
+      "orderno": "10091",
+      "productdetails": "Lenovo",
+      "problemtype": "Replace Product",
+      "descriptions": "Product is not as I had expected"
+    }
+
+  ],
+  
   "signupUsers": [
     {
       "fullname": "mansi mhatre",
@@ -316,6 +376,55 @@
         }
       ],
       "id": 4
+    },
+    {
+      "orderid": 807244,
+      "payment": "online",
+      "date": "2023-04-18T08:51:56.666Z",
+      "userid": 1,
+      "products": [
+        {
+          "product": {
+            "productName": "oppo",
+            "productDescription": "oppo new mobile phone",
+            "imageUrl": "assets/1.jpg",
+            "productId": 7,
+            "unitPrice": "34000",
+            "Vendor": "mahesh",
+            "prodcuctCategory": "Mobile",
+            "id": 7,
+            "quantity": 1
+          }
+        },
+        {
+          "product": {
+            "productName": "lenovo",
+            "productDescription": "new len laptop",
+            "imageUrl": "assets/2.jpg",
+            "productId": 9,
+            "unitPrice": "4500",
+            "Vendor": "mahesh",
+            "prodcuctCategory": "Laptop",
+            "id": 9,
+            "quantity": 1
+          }
+        },
+        {
+          "product": {
+            "productName": "LG 1.5 Ton 5 Star",
+            "productDescription": "LG 1.5 Ton 5 Star AI DUAL Inverter Split AC ",
+            "imageUrl": "assets/1ac.jpg",
+            "unitPrice": "45000",
+            "Vendor": "ashwin",
+            "prodcuctCategory": "AC",
+            "productId": 11,
+            "id": 11,
+            "quantity": 1
+          }
+        }
+      ],
+      "grandTotal": 83500,
+      "id": 5
     }
   ],
   "vendorsdata": [
