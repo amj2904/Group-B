@@ -10,6 +10,8 @@ import { SignupComponent } from './signup/signup.component';
 import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { DisputeListComponent } from './dispute-list/dispute-list.component';
+import { HelpCentreComponent } from './help-centre/help-centre.component';
 
 const routes: Routes = [
   {
@@ -49,6 +51,13 @@ const routes: Routes = [
   {
     path:'my-orders',component:MyOrdersComponent
   },
+
+  {
+    path: 'disputelist', component:DisputeListComponent
+  },
+    {
+      path: 'helpcentre', component:HelpCentreComponent
+    },
   
 ];
 

@@ -1,0 +1,47 @@
+
+<div class="wrapper">
+    <div class="title">
+      <h1>Help Center</h1>
+    </div>
+    <form [formGroup]="helpcentreform">
+    <div class="form-group" >
+      <label>Order No.</label>
+      <input formControlName="orderno" input type="text" class="form-control" minlength="4">
+    </div>
+    <div class="error" *ngIf="orderno && orderno.invalid && orderno.touched">
+      Order no. needs a minimum length of 4.
+    </div>
+     
+    <div class="form-group">
+      <label>Product Details</label>
+      <input formControlName="productdetails" input type="email" class="form-control">
+    </div>
+    <div class="error" *ngIf="productdetails && productdetails.invalid && productdetails.touched">
+      Input Fields is empty.
+    </div>
+
+    <div class="form-group">
+      <p>Problem Type</p>
+      <select formControlName="problemtype">
+        <option value="Return Fund"> Return Fund</option>
+        <option value="Replace Product"> Replace Product</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Descriptions</label>
+      <input formControlName="descriptions" input type="text" class="form-control">
+    </div>
+    <div class="error" *ngIf="descriptions && descriptions.invalid && descriptions.touched">
+      Descriptions needs a minlength of 10
+    </div>
+
+    <button [disabled]="helpcentreform.invalid" class="btn btn-primary" type="submit" (click)="onSubmit()">Submit</button>
+    <button class="btn btn-primary"  (click)="resetForm()">Reset</button>
+
+    </form>
+    {{helpcentreform.value | json}}
+    {{message}}
+  </div>
+  
+
