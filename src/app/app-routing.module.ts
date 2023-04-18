@@ -8,6 +8,8 @@ import { AddcartComponent } from './cart/addcart/addcart.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
+import { HelpCentreComponent } from './help-centre/help-centre.component';
+import { DisputeListComponent } from './dispute-list/dispute-list.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path:'login', component:LoginComponent
   },
+
+  {
+    path: 'disputelist', component:DisputeListComponent
+  },
+
+  {
+      path: 'helpcentre', component:HelpCentreComponent
+    },
   {
     path:'signup', component:SignupComponent
   },
