@@ -15,7 +15,7 @@ body{
 }
 
 .aboutus-container {
-	min-height: 100vh;
+	min-height: 120vh;
 	width: 100%;
 	background: #c8e8e9;
 	padding-top: 10px;
@@ -55,7 +55,7 @@ body{
 	align-items: center;
 	justify-content: center;
 	padding: 1em;
-	margin-bottom: 10px;
+	padding-bottom: 0;
 	margin-top: 100px;
 }
 
@@ -74,18 +74,19 @@ body{
 .wrapper-left{
     -webkit-box-align: stretch;
     align-items: stretch;
-	margin: 150px auto;
+	margin: 10px auto;
 	float: left;
 	width: 90%;
 	display: flex;
 	background-color: #c8e8e9;
 	padding: 1rem;
 	border-radius: 7px;
+	margin-top: 10px;
 }
 .wrapper-right{
     -webkit-box-align: stretch;
     align-items: stretch;
-	margin: 150px auto;
+	margin: 10px auto;
 	float: right;
 	width: 90%;
 	display: flex;
@@ -112,8 +113,10 @@ body{
 }
 
 .textbox h2{
-	color: #afafb6;
+	color: #000000;
 	font-size: 14px;
+	margin-top: 20px;
+	margin-left: 20px;
 	
 }
 h1{
@@ -124,8 +127,13 @@ h1{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+	margin-top: 20px;
+	margin-left: 20px;
 
 }
+.textbox p{margin-top: 20px;
+	margin-left: 20px;
+margin-right: 20px;}
 .card-text{
 	font-size: 16px;
 	vertical-align: baseline;
