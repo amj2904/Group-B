@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { VendorComponent } from './vendor/vendor.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,9 @@ const routes: Routes = [
   {
     path:'my-orders',component:MyOrdersComponent
   },
+  {
+    path:'seller',component:VendorComponent
+  }
   
 ];
 

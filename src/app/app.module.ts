@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { VendorComponent } from './vendor/vendor.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     LoginComponent,
     SignupComponent,
     ThankyouComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    VendorComponent
    
   ],
   imports: [
