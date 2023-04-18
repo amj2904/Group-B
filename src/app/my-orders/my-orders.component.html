@@ -1,0 +1,48 @@
+<div class=" container my-orders">
+    <h1>Order List</h1>
+    <div class="row order-data">
+        <div class="col-sm-2">
+            <span>Order</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Order Id</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Product Name</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Price</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Quantity</span>
+        </div>
+        <div class="col-sm-2">
+            <span>Order Date</span>
+        </div>
+    </div>
+
+    <div class="row order-data" *ngFor="let order of orderData">
+        <div class="col-sm-2">
+            <img class="order-img" src="https://banner2.cleanpng.com/20180605/utz/kisspng-computer-icons-icon-design-clip-art-order-icon-5b1640620ec2f9.2989062015281849300605.jpg" alt="">
+        </div>
+        <div class="col-sm-2">
+            <span>#{{order.orderid}}</span>
+        </div>
+        <div class="col-sm-2">
+            <span>{{order.products[0].product.productName}}</span>
+        </div>
+        <div class="col-sm-2">
+            <span>{{order.products[0].product.unitPrice}}</span>
+        </div>
+        <div class="col-sm-2">
+            <span>{{order.products[0].product.quantity}}</span>
+        </div>
+        <div class="col-sm-2">
+            <span>{{order.date}}</span>
+        </div>
+    </div>
+
+    
+    
+
+</div>

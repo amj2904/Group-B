@@ -8,8 +8,13 @@ import { AddcartComponent } from './cart/addcart/addcart.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
+<<<<<<< HEAD
 import { HelpCentreComponent } from './help-centre/help-centre.component';
 import { DisputeListComponent } from './dispute-list/dispute-list.component';
+=======
+import { ThankyouComponent } from './thankyou/thankyou.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+>>>>>>> 5b84f852225406895edb25cf5e79a99c0dac70c4
 
 const routes: Routes = [
   {
@@ -50,7 +55,14 @@ const routes: Routes = [
   },
   {
     path:'checkout',component:TestcheckoutComponent
-  }
+  },
+  {
+    path:'thankyou',component:ThankyouComponent
+  },
+  {
+    path:'my-orders',component:MyOrdersComponent
+  },
+  
 
 ];
 

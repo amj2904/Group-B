@@ -67,7 +67,9 @@ addtoCart(product:any){
   }
 
   removeCartItem(product: any){
+    console.log(product)
     this.cartItemList.map((a:any, index:any)=>{
+      console.log(product)
       if(product.id=== a.id){
         this.cartItemList.splice(index,1);
       }
