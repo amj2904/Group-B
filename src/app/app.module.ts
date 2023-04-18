@@ -20,8 +20,13 @@ import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+<<<<<<< HEAD
+import { HelpCentreComponent } from './help-centre/help-centre.component';
+import { DisputeListComponent } from './dispute-list/dispute-list.component';
+=======
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+>>>>>>> 5b84f852225406895edb25cf5e79a99c0dac70c4
 
 @NgModule({
   declarations: [
@@ -36,8 +41,13 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     TestcheckoutComponent,
     LoginComponent,
     SignupComponent,
+<<<<<<< HEAD
+    HelpCentreComponent,
+    DisputeListComponent
+=======
     ThankyouComponent,
     MyOrdersComponent
+>>>>>>> 5b84f852225406895edb25cf5e79a99c0dac70c4
    
   ],
   imports: [

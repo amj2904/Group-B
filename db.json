@@ -34,11 +34,41 @@
       "productName": "Voltas 1.4 Ton 3 Star",
       "productDescription": "(Copper, Adjustable Cooling, Anti-dust Filter, 2023 Model",
       "imageUrl": "assets/3ac.jpg",
+      "productId": 13,
       "unitPrice": "30000",
       "Vendor": "ashwin",
-      "prodcuctCategory": "AC",
-      "productId": 12,
+      "prodcuctCategory": "Laptop",
       "id": 13
+    }
+  ],
+  "HelpCentre": [
+    {
+      "id": 0,
+      "orderno": "",
+      "productdetails": "",
+      "problemtype": "",
+      "descriptions": ""
+    },
+    {
+      "id": 1,
+      "orderno": "10111",
+      "productdetails": "ksksksksks",
+      "problemtype": "Return Fund",
+      "descriptions": "kskskskksklklsllslss"
+    },
+    {
+      "id": 2,
+      "orderno": "1222",
+      "productdetails": "dsdede",
+      "problemtype": "Return Fund",
+      "descriptions": "dsdsdsdsdsd"
+    },
+    {
+      "id": 3,
+      "orderno": "839999",
+      "productdetails": "T-shirt",
+      "problemtype": "Return Fund",
+      "descriptions": "Product is not upto the mark"
     }
   ],
   "signupUsers": [
