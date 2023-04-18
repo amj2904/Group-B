@@ -1,0 +1,137 @@
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 80vh;
+}
+
+.aboutus-container {
+	min-height: 100vh;
+	width: 100%;
+	background: #c8e8e9;
+	padding-top: 10px;
+	
+}
+.text-small{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.text-big{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 2rem;
+
+}
+.container {
+	width: 86%;
+	background-color: white;
+	border-radius: 6px;
+	min-height: 80vh;
+	/* margin-top: 3.1rem; */
+	/* padding: 20px 60px 30px 40px; */
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	align-items: center;
+	justify-content: center;
+	margin-left: 7%;
+}
+.content{
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+
+	
+}
+.container .content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+	margin-bottom: 10px;
+	margin-top: 100px;
+}
+
+.button input[type="button"]:hover {
+	background: #5029bc;
+}
+
+.details .ourway{
+	padding: 1rem;
+	margin-top: 6.1rem;
+	margin-bottom: 2rem;
+	font-size: 1.5rem;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.wrapper-left{
+    -webkit-box-align: stretch;
+    align-items: stretch;
+	margin: 150px auto;
+	float: left;
+	width: 90%;
+	display: flex;
+	background-color: #c8e8e9;
+	padding: 1rem;
+	border-radius: 7px;
+}
+.wrapper-right{
+    -webkit-box-align: stretch;
+    align-items: stretch;
+	margin: 150px auto;
+	float: right;
+	width: 90%;
+	display: flex;
+	background-color: #c8e8e9;
+	padding: 1rem;
+	border-radius: 7px;
+}
+.textbox{
+	justify-content: space-between;
+	
+}
+.bottom-section{
+	justify-content: center;
+	align-items: center;
+	background: #5029bc;
+}
+
+
+.wrapper-left img{
+	float: right;
+}
+.wrapper-right img{
+	float: right;
+}
+
+.textbox h2{
+	color: #afafb6;
+	font-size: 14px;
+	
+}
+h1{
+	font-size: 42px;
+	color: #4c4c4b;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+}
+.card-text{
+	font-size: 16px;
+	vertical-align: baseline;
+}
+
+
+.bottom-section{
+	padding: 0%;
+}
