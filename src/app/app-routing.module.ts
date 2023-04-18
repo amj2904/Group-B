@@ -9,8 +9,6 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 <<<<<<< HEAD
-import { HelpCentreComponent } from './help-centre/help-centre.component';
-import { DisputeListComponent } from './dispute-list/dispute-list.component';
 =======
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
@@ -23,14 +21,6 @@ const routes: Routes = [
   {
     path:'login', component:LoginComponent
   },
-
-  {
-    path: 'disputelist', component:DisputeListComponent
-  },
-
-  {
-      path: 'helpcentre', component:HelpCentreComponent
-    },
   {
     path:'signup', component:SignupComponent
   },
@@ -63,7 +53,6 @@ const routes: Routes = [
     path:'my-orders',component:MyOrdersComponent
   },
   
-
 ];
 
 @NgModule({
