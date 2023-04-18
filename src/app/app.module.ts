@@ -22,6 +22,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { HelpCentreComponent } from './help-centre/help-centre.component';
+import { DisputeListComponent } from './dispute-list/dispute-list.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     LoginComponent,
     SignupComponent,
     ThankyouComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    HelpCentreComponent,
+    DisputeListComponent
    
   ],
   imports: [
