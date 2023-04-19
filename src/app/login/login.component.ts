@@ -27,16 +27,22 @@ export class LoginComponent implements OnInit {
     console.log(res);
    const user= res.find((a:any)=>
    {
+    
+    localStorage.setItem("userdata",JSON.stringify(a));
+  
     return a.email=== this.loginForm.value.email &&  a.password=== this.loginForm.value.password
+    
+
    });
 
-
+   
    if (user){
     console.log(res);
     alert("Login Success");
     this.loginForm.reset();
-    this.router.navigate(['productpage'])
+    this.router.navigate(['checkout'])
      }
+     
      else{
       alert("user not found");
     }

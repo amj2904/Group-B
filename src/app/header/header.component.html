@@ -23,9 +23,19 @@
             Contact Us
           </button>
 
-          <button [routerLink]="['/my-orders']" class="btn cart-btn">
+          <!-- <button [routerLink]="['/my-orders']" class="btn cart-btn">
             Order List
+          </button> -->
+
+          <button [routerLink]="['/helpcentre']" class="btn cart-btn">
+            Help Centre
           </button>
+
+          <!-- <button [routerLink]="['/disputelist']" class="btn cart-btn">
+            Dispute List
+          </button> -->
+
+
     
           <button routerLink="add-product" [routerLink]="['/addproduct']" class="btn cart-btn">Add Products</button>
     
@@ -43,4 +53,10 @@
       <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
       <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
   </button>
+
+ 
+    <button   (click)="logout()"  class="btn btn-primary" >logout</button>
+ 
+   
+  
     </nav>

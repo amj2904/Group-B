@@ -13,7 +13,11 @@ import { Router } from '@angular/router';
 export class TestcheckoutComponent implements OnInit {
   getUser:any;
   products:any[]=[];
+  userData:any[]=[];
+
   grandTotal1:number=0;
+  shippinfAddress:any;
+  
   
   paymentoption:string='';
 
@@ -40,19 +44,25 @@ export class TestcheckoutComponent implements OnInit {
 
   onSubmit(form){
     let user=JSON.parse(localStorage.getItem('userdata'));
-   console.log("::::",this.paymentoption);
+  
     let random = Math.floor(Math.random() * (999999 - 100000)) + 100000;
-    console.log("testing Ashwin",random);
+    
   const userid=user.id;
  const date =new Date();
- console.log(date);
+
     const order:any={
       
-      orderid:random,
+     orderid:random,
+     userid:userid,
+     username:user.fullname,
+     email:user.email,
+     shifingAddress:this.getUser.address,
       payment:this.paymentoption,
       date:date,
-      userid:userid,
-      products:this.products
+      
+      products:this.products,
+      grandTotal:this.grandTotal1
+
     };
     console.log(order);
     //
@@ -66,7 +76,7 @@ export class TestcheckoutComponent implements OnInit {
         console.log("Something went wrong");
       }
       
-      console.log(this.paymentoption);
+     
     })
    
   }

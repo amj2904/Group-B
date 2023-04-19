@@ -11,9 +11,11 @@ import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 
+import { AuthGuard } from './auth.guard';
+
 const routes: Routes = [
   {
-    path:'', redirectTo:'login', pathMatch:'full'
+    path:'', redirectTo:'productpage', pathMatch:'full'
   },
   {
     path:'login', component:LoginComponent
@@ -41,7 +43,7 @@ const routes: Routes = [
     path:'addtocart',component:AddcartComponent
   },
   {
-    path:'checkout',component:TestcheckoutComponent
+    path:'checkout',component:TestcheckoutComponent,canActivate:[AuthGuard]
   },
   {
     path:'thankyou',component:ThankyouComponent
@@ -54,6 +56,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers:[AuthGuard]
 })
 export class AppRoutingModule { }
