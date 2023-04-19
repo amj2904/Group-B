@@ -48,8 +48,6 @@ const routes: Routes = [
   {
     path:'my-orders',component:MyOrdersComponent
   },
-<<<<<<< HEAD
-=======
 
   {
     path: 'disputelist', component:DisputeListComponent
@@ -57,7 +55,6 @@ const routes: Routes = [
     {
       path: 'helpcentre', component:HelpCentreComponent
     },
->>>>>>> 9497735638ea48b8862baad090fe86e94babd7b7
   
 ];
 
