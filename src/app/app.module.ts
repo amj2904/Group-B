@@ -22,12 +22,6 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
-<<<<<<< HEAD
-import { VendorComponent } from './vendor/vendor.component';
-=======
-import { HelpCentreComponent } from './help-centre/help-centre.component';
-import { DisputeListComponent } from './dispute-list/dispute-list.component';
->>>>>>> 9497735638ea48b8862baad090fe86e94babd7b7
 
 @NgModule({
   declarations: [
@@ -44,13 +38,7 @@ import { DisputeListComponent } from './dispute-list/dispute-list.component';
     SignupComponent,
     ThankyouComponent,
     MyOrdersComponent,
-<<<<<<< HEAD
-    VendorComponent
-=======
-    HelpCentreComponent,
-    DisputeListComponent
->>>>>>> 9497735638ea48b8862baad090fe86e94babd7b7
-   
+    VendorComponent   
   ],
   imports: [
     BrowserModule,
