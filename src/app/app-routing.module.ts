@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+
 const routes: Routes = [
   {
     path:'', redirectTo:'login', pathMatch:'full'
@@ -48,13 +49,6 @@ const routes: Routes = [
   {
     path:'my-orders',component:MyOrdersComponent
   },
-
-  {
-    path: 'disputelist', component:DisputeListComponent
-  },
-    {
-      path: 'helpcentre', component:HelpCentreComponent
-    },
   
 ];
 

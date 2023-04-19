@@ -38,7 +38,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     SignupComponent,
     ThankyouComponent,
     MyOrdersComponent,
-    VendorComponent   
+
+   
   ],
   imports: [
     BrowserModule,
