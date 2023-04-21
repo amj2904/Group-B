@@ -12,6 +12,9 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 import { AuthGuard } from './auth.guard';
+import { FooterComponent } from './footer/footer.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { TestOrdersComponent } from './test-orders/test-orders.component';
 
 const routes: Routes = [
   {
@@ -51,6 +54,14 @@ const routes: Routes = [
   {
     path:'my-orders',component:MyOrdersComponent
   },
+  {
+    path:'footer',component:FooterComponent
+  },{
+    path:'vendor',component:VendorComponent
+  },
+  {
+    path:'ashwinorders',component:TestOrdersComponent
+  }
   
 ];
 

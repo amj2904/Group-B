@@ -37,7 +37,7 @@
 
 
     
-          <button routerLink="add-product" [routerLink]="['/addproduct']" class="btn cart-btn">Add Products</button>
+          <button routerLink="add-product" [routerLink]="['/addproduct']" class="btn cart-btn">admin</button>
     
           <div class="form-group">
             <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)"  
@@ -54,9 +54,10 @@
       <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
   </button>
 
- 
-    <button   (click)="logout()"  class="btn btn-primary" >logout</button>
- 
+  <button *ngIf="!loggedIn()"  [routerLink]="['/login']"  class="btn cart-btn" >Login/Signup</button>
+  <button   class="btn cart-btn" >{{fullname}}</button>
+    <button *ngIf="loggedIn()"  (click)="logoutUser()"  class="btn cart-btn" >logout</button>
    
+ 
   
     </nav>

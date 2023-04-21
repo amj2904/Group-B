@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class VendorsserviceService {
-  url="http://localhost:3000/vendors";
+  url="http://localhost:3000/vendorData";
 
   constructor(private _http:HttpClient) { }
 

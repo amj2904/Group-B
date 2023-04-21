@@ -1,6 +1,6 @@
 <div class="container-fluid mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-6">
+    <div class="col-md-3">
       <form #form="ngForm" (ngSubmit)="onSubmit(form)">
 
         <div class="form-group" >
@@ -8,7 +8,7 @@
           <label for="registerFirstname" class="form-label">First Name</label>
 
           <input type="text" name="firstName" ngModel required #Firstname="ngModel" [(ngModel)]="getUser.fullname"
-            class="form-control" id="firstName" placeholder="FirstName">
+            class="form-control" id="firstName" placeholder="FirstName" disabled>
 
         </div>
 
@@ -17,7 +17,7 @@
           <label for="registerLastname" class="form-label">Email</label>
 
           <input type="text" name="email" ngModel required #email="ngModel" [(ngModel)]="getUser.email"
-            class="form-control" id="lastName" placeholder="lastName">
+            class="form-control" id="lastName" placeholder="lastName" disabled>
 
         </div>
         <div class="form-group">
@@ -25,7 +25,7 @@
           <label for="registerLastname" class="form-label">Shipping Address</label>
 
           <input type="text" name="address" ngModel required #address="ngModel" [(ngModel)]="getUser.address"
-            class="form-control" id="lastName" placeholder="lastName">
+            class="form-control" id="lastName" placeholder="lastName" >
 
              <!-- //************ -->
              <!-- <div class="mb-3">
@@ -62,8 +62,8 @@
         <thead>
           <tr>
             <th>Product Name</th>
-
-            <th>Price</th>
+            <th>Product Image</th>
+            <th> Unit Price</th>
             <th>Quantity</th>
           </tr>
 
@@ -71,13 +71,14 @@
         <tbody>
           <tr *ngFor="let pro of products">
             <td>{{pro.product.productName}}</td>
+            <td> <img src="{{pro.product.imageUrl}}" width="50px" height="50px"  alt=""> </td>
             <td>{{pro.product.unitPrice}}</td>
             <td>{{pro.product.quantity}}</td>
           </tr>
           <tr>
             <td></td>
             <td></td>
-            <td style="margin-left: 100px;">{{grandTotal1}}</td>
+            <td style="margin-left: 100px; color: red;">GrandTotal:{{grandTotal1}}</td>
           </tr>
         </tbody>
       

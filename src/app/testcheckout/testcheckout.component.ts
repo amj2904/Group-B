@@ -70,7 +70,7 @@ export class TestcheckoutComponent implements OnInit {
       console.log(res);
       if(res!=null){
         alert("Your order has been places successfully")
-        this.router.navigate(['thankyou']);
+        this.router.navigate(['homepage']);
       }
       else{
         console.log("Something went wrong");

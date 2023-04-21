@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     console.log(res);
     alert("Login Success");
     this.loginForm.reset();
-    this.router.navigate(['checkout'])
+    this.router.navigate(['productpage'])
      }
      
      else{

@@ -16,4 +16,11 @@ export class OrdersService {
       return res;
     }))
   }
+  getOrders(){
+    return this._http.get<any>("http://localhost:3000/orders")
+    .pipe(map((res)=>{
+      return res;
+    }))
+
+  }
 }

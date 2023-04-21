@@ -9,7 +9,7 @@
     
     <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Users Data</button>
     &nbsp;&nbsp;
-    <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Add Vendor</button>
+    <button  type="button" class="btn btn-success" [routerLink]="['/vendor']">Add Vendor</button>
     &nbsp;&nbsp;
     <!-- <button  type="button" class="btn btn-success" [routerLink]="['/aboutus']">Add Category</button>
     &nbsp;&nbsp; -->
@@ -108,7 +108,7 @@
                   <label for="unitPrice" class="form-label">Select Vendor</label>
                   <select formControlName="Vendor" class="form-select">
                    
-                      <option  *ngFor="let vendor of allProductVendors" value="{{vendor.vendername}}" >{{vendor.vendername}}</option>
+                      <option  *ngFor="let vendor of allProductVendors" value="{{vendor.firstName}}" >{{vendor.firstName}}</option>
                     
                     
                   </select>

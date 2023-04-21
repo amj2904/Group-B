@@ -22,6 +22,9 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { FooterComponent } from './footer/footer.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { TestOrdersComponent } from './test-orders/test-orders.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     SignupComponent,
     ThankyouComponent,
     MyOrdersComponent,
+    FooterComponent,
+    VendorComponent,
+    TestOrdersComponent,
 
    
   ],
