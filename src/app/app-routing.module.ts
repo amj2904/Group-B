@@ -15,6 +15,7 @@ import { AuthGuard } from './auth.guard';
 import { FooterComponent } from './footer/footer.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { TestOrdersComponent } from './test-orders/test-orders.component';
+import { AdminContactUsDataComponent } from './admin-contact-us-data/admin-contact-us-data.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,9 @@ const routes: Routes = [
   },
   {
     path:'ashwinorders',component:TestOrdersComponent
+  },
+  {
+    path:'contact', component:AdminContactUsDataComponent
   }
   
 ];

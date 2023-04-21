@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AdminContactUsDataComponent } from './admin-contact-us-data/admin-contact-us-data.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductDashboardComponent } from './product-dashboard/product-dashboard.component';
@@ -44,7 +44,7 @@ import { TestOrdersComponent } from './test-orders/test-orders.component';
     FooterComponent,
     VendorComponent,
     TestOrdersComponent,
-
+    AdminContactUsDataComponent 
    
   ],
   imports: [
