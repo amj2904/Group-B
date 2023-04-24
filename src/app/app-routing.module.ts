@@ -17,6 +17,7 @@ import { VendorComponent } from './vendor/vendor.component';
 import { TestOrdersComponent } from './test-orders/test-orders.component';
 import { AdminContactUsDataComponent } from './admin-contact-us-data/admin-contact-us-data.component';
 import { ForgetComponent } from './forget/forget.component';
+import { UsersignupdataComponent } from './usersignupdata/usersignupdata.component';
 
 const routes: Routes = [
   {
@@ -68,7 +69,11 @@ const routes: Routes = [
     path:'contact', component:AdminContactUsDataComponent
   },
   {
-    path:'forget', component:ForgetComponent
+    path:'forget', component:ForgetComponent},
+    {
+
+    
+    path:'userdata',component:UsersignupdataComponent
   }
 
 ];

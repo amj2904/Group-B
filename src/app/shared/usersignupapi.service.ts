@@ -5,14 +5,14 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class ContactusdataService {
-  urlSignUp="http://localhost:3000/contactus";
+export class UsersignupapiService {
+  urlSignUpData="http://localhost:3000/signupUsers";
 
   constructor(private _http:HttpClient) { }
 
 
-  getSignUp(){
-    return this._http.get<any>(this.urlSignUp,).pipe(map((res:any)=>{
+  getSignUpData(){
+    return this._http.get<any>(this.urlSignUpData,).pipe(map((res:any)=>{
       return res;
     }))
   }

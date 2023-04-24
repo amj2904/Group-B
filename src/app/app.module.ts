@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { TestOrdersComponent } from './test-orders/test-orders.component';
 import { ForgetComponent } from './forget/forget.component';
+import { UsersignupdataComponent } from './usersignupdata/usersignupdata.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ForgetComponent } from './forget/forget.component';
     VendorComponent,
     TestOrdersComponent,
     AdminContactUsDataComponent,
-    ForgetComponent 
+    ForgetComponent,
+    UsersignupdataComponent 
    
   ],
   imports: [
