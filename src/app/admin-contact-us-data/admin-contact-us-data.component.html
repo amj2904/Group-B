@@ -1,0 +1,27 @@
+
+<table class="table  mt-3">
+    <thead>
+        <tr>
+
+            <th   scope="col"> ID </th>
+            <th scope="col" >Message</th>
+            <th scope="col" >Email</th>
+           
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of data | paginate:{ itemsPerPage:5,currentPage:page,totalItems:totalLength }">
+           <td>{{data.id}}</td>
+           <td>{{data.name}}</td>
+           <td>{{data.email}}</td>
+          
+    
+         
+        </tr>
+      
+    </tbody>
+</table>
+
+ <pagination-controls  class="text-center" (pageChange)="page= $event"></pagination-controls >
+    <button type="button" class="btn btn-primary" [routerLink]="['/addproduct']">Back</button>

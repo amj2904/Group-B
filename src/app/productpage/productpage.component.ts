@@ -64,6 +64,9 @@ export class ProductpageComponent implements OnInit {
       }
     })
   }
+  logout(){
+    window.location.reload()
+  }
  }
 
   

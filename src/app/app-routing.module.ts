@@ -11,9 +11,17 @@ import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 
+import { AuthGuard } from './auth.guard';
+import { FooterComponent } from './footer/footer.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { TestOrdersComponent } from './test-orders/test-orders.component';
+import { AdminContactUsDataComponent } from './admin-contact-us-data/admin-contact-us-data.component';
+import { ForgetComponent } from './forget/forget.component';
+import { UsersignupdataComponent } from './usersignupdata/usersignupdata.component';
+
 const routes: Routes = [
   {
-    path:'', redirectTo:'login', pathMatch:'full'
+    path:'', redirectTo:'productpage', pathMatch:'full'
   },
   {
     path:'login', component:LoginComponent
@@ -41,7 +49,7 @@ const routes: Routes = [
     path:'addtocart',component:AddcartComponent
   },
   {
-    path:'checkout',component:TestcheckoutComponent
+    path:'checkout',component:TestcheckoutComponent,canActivate:[AuthGuard]
   },
   {
     path:'thankyou',component:ThankyouComponent
@@ -49,12 +57,30 @@ const routes: Routes = [
   {
     path:'my-orders',component:MyOrdersComponent
   },
-  
+  {
+    path:'footer',component:FooterComponent
+  },{
+    path:'vendor',component:VendorComponent
+  },
+  {
+    path:'ashwinorders',component:TestOrdersComponent
+  },
+  {
+    path:'contact', component:AdminContactUsDataComponent
+  },
+  {
+    path:'forget', component:ForgetComponent},
+    {
+
+    
+    path:'userdata',component:UsersignupdataComponent
+  }
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers:[AuthGuard]
 })
 export class AppRoutingModule { }

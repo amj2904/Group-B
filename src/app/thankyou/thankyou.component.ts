@@ -10,6 +10,11 @@ export class ThankyouComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    localStorage.clear();//clear localstorage data
+    localStorage.removeItem('cartObj');
+    
   }
+  
 
 }
