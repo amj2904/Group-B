@@ -25,6 +25,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { FooterComponent } from './footer/footer.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { TestOrdersComponent } from './test-orders/test-orders.component';
+import { ForgetComponent } from './forget/forget.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TestOrdersComponent } from './test-orders/test-orders.component';
     FooterComponent,
     VendorComponent,
     TestOrdersComponent,
-    AdminContactUsDataComponent 
+    AdminContactUsDataComponent,
+    ForgetComponent 
    
   ],
   imports: [

@@ -81,6 +81,20 @@
       "password": "1234",
       "mobile": 9212321231,
       "id": 10
+    },
+    {
+      "fullname": "saru",
+      "email": "saru@gmail.com",
+      "password": "4545",
+      "mobile": 1223456,
+      "id": 11
+    },
+    {
+      "fullname": "payal a",
+      "email": "payal@gmail.com",
+      "password": "34567",
+      "mobile": 234567,
+      "id": 12
     }
   ],
   "contactus": [
