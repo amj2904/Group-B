@@ -30,6 +30,8 @@ import { VendorComponent } from './vendor/vendor.component';
 import { TestOrdersComponent } from './test-orders/test-orders.component';
 import { ForgetComponent } from './forget/forget.component';
 import { UsersignupdataComponent } from './usersignupdata/usersignupdata.component';
+import { HelpCentreComponent } from './help-centre/help-centre.component';
+import { DisputeListComponent } from './dispute-list/dispute-list.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { UsersignupdataComponent } from './usersignupdata/usersignupdata.compone
     TestOrdersComponent,
     AdminContactUsDataComponent,
     ForgetComponent,
-    UsersignupdataComponent 
+    UsersignupdataComponent,
+    HelpCentreComponent,
+    DisputeListComponent 
    
   ],
   imports: [
