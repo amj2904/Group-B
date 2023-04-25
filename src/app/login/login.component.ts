@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     console.log(res);
    const user= res.find((a:any)=>
    {
-    
+    //testing
     localStorage.setItem("userdata",JSON.stringify(a));
   
     return a.email=== this.loginForm.value.email &&  a.password=== this.loginForm.value.password
@@ -41,6 +41,9 @@ export class LoginComponent implements OnInit {
     alert("Login Success");
     this.loginForm.reset();
     this.router.navigate(['productpage'])
+     }
+    else if(this.loginForm.value.email==="Admin" && this.loginForm.value.password==="Admin"){
+      this.router.navigate(['addproduct']);
      }
      
      else{

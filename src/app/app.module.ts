@@ -22,9 +22,14 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { FooterComponent } from './footer/footer.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { TestOrdersComponent } from './test-orders/test-orders.component';
+import { ForgetComponent } from './forget/forget.component';
+import { UsersignupdataComponent } from './usersignupdata/usersignupdata.component';
 import { HelpCentreComponent } from './help-centre/help-centre.component';
 import { DisputeListComponent } from './dispute-list/dispute-list.component';
 
@@ -47,6 +52,8 @@ import { DisputeListComponent } from './dispute-list/dispute-list.component';
     VendorComponent,
     TestOrdersComponent,
     AdminContactUsDataComponent,
+    ForgetComponent,
+    UsersignupdataComponent,
     HelpCentreComponent,
     DisputeListComponent 
    
@@ -54,12 +61,19 @@ import { DisputeListComponent } from './dispute-list/dispute-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     // Ng2SearchPipeModule,
     Ng2OrderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ToastrModule.forRoot({
+      timeOut:2000,
+      progressAnimation: 'increasing',
+      progressBar:true,
+      positionClass:'toast-bottom-right'
+    })
  
   ],
   providers: [],

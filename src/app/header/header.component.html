@@ -37,7 +37,7 @@
 
 
     
-          <button routerLink="add-product" [routerLink]="['/addproduct']" class="btn cart-btn">admin</button>
+          <!-- <button [routerLink]="['/addproduct']" class="btn cart-btn">admin</button> -->
     
           <div class="form-group">
             <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)"  
@@ -49,6 +49,8 @@
     
       </div>
     </div>
+    <button [routerLink]="['/login']" class="btn cart-btn">Login/SignUp</button>
+
     <button style="position: absolute; right: 5%;"  routerLink="addtocart" class="btn cart-btn">
       <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
       <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>

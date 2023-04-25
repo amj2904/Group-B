@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { Productmodel } from '../model/productmodel';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,7 @@ export class CartserviceService {
   httpOptions={
     headers:new HttpHeaders({'Content-Type':'application/json'})
   }
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient, private toastr:ToastrService) { }
 
   getProductPage():Observable<Productmodel []>{
     return this.httpClient.get<Productmodel []>(this.base_url);
@@ -39,24 +41,21 @@ export class CartserviceService {
   }
   
 addtoCart(product:any){
-  const itemIndex = this.cartItemList.findIndex(item => item.productId === product.productId);
+  const itemIndex = this.cartItemList.findIndex(item => item.product.productId === product.productId);
   const _product={product:product};
 
   if (itemIndex === -1) {
+    console.log(itemIndex)
     this.cartItemList.push(_product);
+    this.toastr.success( `${product.productName} Successfully added to cart` , `Awesome!`); //Used for notification
+    }else{
+      this.toastr.warning( `${product.productName} Already added to cart` ); //Used for notification
+
     }
-
-
-  // const _product={product:product,quantity:pQuantity};
-  //console.log("addtocart : " +JSON.stringify(_product));
-  // this.cartItemList.push(_product);
-  this.productList.next(this.cartItemList.slice(0));
-  //console.log("cartlist............"+JSON.stringify(this.cartItemList));
-  // this.getTotalPrice();
+    this.productList.next(this.cartItemList.slice(0));
+  
 }
 
-
-  // this method get total price by adding all the products total from cart
   getTotalPrice() : number{
     let grandTotal = 0;
     this.cartItemList.map((a:any)=>{
