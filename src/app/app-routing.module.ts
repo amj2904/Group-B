@@ -10,7 +10,8 @@ import { SignupComponent } from './signup/signup.component';
 import { TestcheckoutComponent } from './testcheckout/testcheckout.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
-
+import { HelpCentreComponent } from './help-centre/help-centre.component';
+import { DisputeListComponent } from './dispute-list/dispute-list.component';
 import { AuthGuard } from './auth.guard';
 import { FooterComponent } from './footer/footer.component';
 import { VendorComponent } from './vendor/vendor.component';
@@ -65,6 +66,14 @@ const routes: Routes = [
   },
   {
     path:'contact', component:AdminContactUsDataComponent
+  },
+
+  {
+    path:'helpcentre',component:HelpCentreComponent
+  },
+
+  {
+    path:'disputelist',component:DisputeListComponent
   }
   
 ];
