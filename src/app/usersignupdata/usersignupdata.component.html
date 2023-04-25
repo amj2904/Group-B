@@ -1,14 +1,14 @@
-<h6></h6>
-<button class=" btn btn-success">Total Number Of User:{{totalNumberOfUser}}</button>
-<table class="table  mt-3">
+<br>
+<button class=" btn">Total Number Of User:{{totalNumberOfUser}}</button>
+<h1>Total registered Users</h1>
+<div style="margin-left: 10vw;">
+<table class="table content-table mt-3">
     <thead>
         <tr>
-
             <th   scope="col"> ID </th>
             <th scope="col" >Name</th>
             <th scope="col" >Email</th>
             <th scope="col" >Mobile</th>
-
            
            
         </tr>
@@ -27,7 +27,7 @@
       
     </tbody>
 </table>
-
+</div>
 
  <pagination-controls  class="text-center" (pageChange)="page= $event"></pagination-controls >
     <button type="button" class="btn btn-primary" [routerLink]="['/addproduct']">Back</button>
